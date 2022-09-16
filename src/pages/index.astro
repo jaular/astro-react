@@ -1,0 +1,15 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Counter from "~/components/Counter";
+const counterProps = {
+  count: 10,
+};
+---
+
+<Layout>
+  <main>
+    <h1 class="mb-8 text-4xl font-bold">Astro with React</h1>
+    <Counter client:visible {...counterProps} />
+    <!-- https://docs.astro.build/en/core-concepts/framework-components/#using-framework-components  -->
+  </main>
+</Layout>
